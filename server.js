@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3001;
 const allowedOrigins = [
   'https://oscarh.co.uk',
   'https://www.oscarh.co.uk',
+  'https://fileforge.oscarh.co.uk',
   'http://localhost:3000',
   'http://127.0.0.1:5500',
   // Add your Netlify URL below once you have it:
