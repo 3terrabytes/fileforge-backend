@@ -68,7 +68,7 @@ app.post('/convert/image', upload.single('file'), async (req, res) => {
 
   try {
     // Use ImageMagick (convert) for image conversion
-    execSync(`convert "${inputPath}" "${outputPath}"`);
+    execSync(`convert "${inputPath}[0]" -strip -quality 92 "${outputPath}"`);
     res.download(outputPath, req.file.originalname.replace(/\.[^.]+$/, '') + '.' + format.toLowerCase(), () => {
       cleanup(inputPath, outputPath);
     });
