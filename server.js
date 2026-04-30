@@ -27,6 +27,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(express.static(__dirname));
 
 // Upload directory
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
